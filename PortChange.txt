@@ -1,0 +1,21 @@
+A) Set the new port for dev server 
+User command react-native start --port=8088 
+or 
+yourproject\node_modules\react-native\local-cli\server\server.js to set the the available port say 8080 
+now use react-native start to start server on 8080 
+
+B) Now to establish communication between emulator and dev server, use below command
+adb -s emulator-5554 reverse tcp:8088 tcp:8088
+i) 5554 =>emulator port (adb devices command will tell you emulator port but if this command is not working then set the path C:/../android-sdk/platform-tools in Path environemnt variable )
+ii) 8088 =>server port 
+
+C) run the command react-native run-android
+
+D) Follow below steps updating Dev server path in emulator
+
+i) Ctrl + M for windows to open your dev menu for the emulator. 
+ii) Click Dev Settings 
+III) Under Debugging select Debug server host & port for device 
+IV) Enter the url and port for your application as 10.0.2.2:8088 
+
+https://stackoverflow.com/questions/37376512/dev-server-returned-error-code-403-react-native

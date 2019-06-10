@@ -1,0 +1,17 @@
+There is a temporary fix for now (if you're using Windows)!
+
+1st Close Android Studio
+
+2nd Open CMD and write:  taskkill /f /im adb.exe
+
+3rd Download this file: http://dl-ssl.google.com/android/repository/platform-tools_r28.0.2-windows.zip
+
+4th Go to
+
+C:\Users[your-username]\AppData\Local\Android\Sdk
+
+and replace the "platform-tools" folder with the new one that you just downloaded.
+
+ps: (a) don't forget to keep the backup (b) the AppData is a hidden folder
+
+https://stackoverflow.com/questions/56507194/adb-exe-has-stopped-working-with-android-studio-4-3-1-and-android-9
